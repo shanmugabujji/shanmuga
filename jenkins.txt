@@ -1,0 +1,24 @@
+# dnf install wget -y
+
+# wget http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo -O /etc/yum.repos.d/jenkins.repo
+
+# rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+
+# rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+
+# dnf install -y jenkins
+
+# systemctl start jenkins
+
+# systemctl enable jenkins
+
+# systemctl status jenkins
+
+# firewall-cmd --permanent --add-port=8080/tcp
+
+# firewall-cmd --reload
+
+In this step, we will setup the Jenkins via its web portal, access its portal from the browser and type the URL:
+
+http://<Server-IP>:8080
+
