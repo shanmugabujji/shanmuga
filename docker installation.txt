@@ -1,0 +1,43 @@
+Step-1  sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine \
+                  podman \
+                  runc
+
+Step-2 sudo yum install -y yum-utils
+step-3 sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/rhel/docker-ce.repo
+
+			(or)
+
+       dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+
+Step-4  dnf repolist -v
+
+Step-5  dnf install docker-ce
+
+step-6  systemctl enable --now docker
+
+step-7  systemctl is-active docker
+
+step-8  systemctl is-enabled docker
+
+
+DOCKER-COMPOSE:
+
+
+
+Step-1:
+	curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o docker-compose
+
+Step-2:
+	mv docker-compose /usr/local/bin && sudo chmod +x /usr/local/bin/docker-compose
+
+Step-3:
+	docker-compose --version
